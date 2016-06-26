@@ -66,3 +66,22 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+# Extra bundles
+
+knpu_oauth2_client:
+    clients:
+        facebook_main:
+            type: facebook
+            client_id: %facebook_app_id%
+            client_secret: %facebook_app_secret%
+            redirect_route: connect_facebook_check
+            redirect_params: {}
+            graph_api_version: v2.6
+
+stof_doctrine_extensions:
+    default_locale: "%locale%"
+    orm:
+        default:
+            timestampable: true
+            blameable: true
